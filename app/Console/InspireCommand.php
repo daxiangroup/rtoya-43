@@ -1,4 +1,4 @@
-<?php namespace App\Console;
+<?php namespace Rtoya\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Inspiring;

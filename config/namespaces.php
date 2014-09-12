@@ -13,7 +13,7 @@ return [
 	|
 	*/
 
-	'root' => 'App\\',
+	'root' => 'Rtoya\\',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -26,14 +26,14 @@ return [
 	|
 	*/
 
-	'console' => 'App\Console\\',
+	'console' => 'Rtoya\Console\\',
 
-	'controllers' => 'App\Http\Controllers\\',
+	'controllers' => 'Rtoya\Http\Controllers\\',
 
-	'filters' => 'App\Http\Filters\\',
+	'filters' => 'Rtoya\Http\Filters\\',
 
-	'providers' => 'App\Providers\\',
+	'providers' => 'Rtoya\Providers\\',
 
-	'requests' => 'App\Http\Requests\\',
+	'requests' => 'Rtoya\Http\Requests\\',
 
 ];

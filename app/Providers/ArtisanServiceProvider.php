@@ -1,4 +1,4 @@
-<?php namespace App\Providers;
+<?php namespace Rtoya\Providers;
 
 use InspireCommand;
 use Illuminate\Support\ServiceProvider;
@@ -12,7 +12,7 @@ class ArtisanServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->commands('App\Console\InspireCommand');
+		$this->commands('Rtoya\Console\InspireCommand');
 	}
 
 }

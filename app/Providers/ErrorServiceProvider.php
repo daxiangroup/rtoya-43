@@ -1,4 +1,4 @@
-<?php namespace App\Providers;
+<?php namespace Rtoya\Providers;
 
 use App, Log, Exception;
 use Illuminate\Support\ServiceProvider;

@@ -13,6 +13,6 @@
 
 $env = $app->detectEnvironment([
 
-	'local' => ['homestead'],
+	'local' => ['laptop1343', 'laptop1343.local'],
 
 ]);

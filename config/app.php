@@ -98,12 +98,12 @@ return [
 		/*
 		 * Application Service Providers...
 		 */
-		'App\Providers\AppServiceProvider',
-		'App\Providers\ArtisanServiceProvider',
-		'App\Providers\ErrorServiceProvider',
-		'App\Providers\FilterServiceProvider',
-		'App\Providers\LogServiceProvider',
-		'App\Providers\RouteServiceProvider',
+		'Rtoya\Providers\AppServiceProvider',
+		'Rtoya\Providers\ArtisanServiceProvider',
+		'Rtoya\Providers\ErrorServiceProvider',
+		'Rtoya\Providers\FilterServiceProvider',
+		'Rtoya\Providers\LogServiceProvider',
+		'Rtoya\Providers\RouteServiceProvider',
 
 		/*
 		 * Laravel Framework Service Providers...
@@ -128,6 +128,7 @@ return [
 		'Illuminate\Translation\TranslationServiceProvider',
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
+		'Illuminate\Html\HtmlServiceProvider',
 
 	],
 
@@ -186,6 +187,10 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
+		'HTML' 		=> 'Illuminate\Html\HtmlFacade',
+		'Form' 		=> 'Illuminate\Html\FormFacade',
+
+		// 'AccountService' => 'Rtoya\Services\AccountService'
 
 	],
 

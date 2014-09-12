@@ -1,4 +1,4 @@
-<?php namespace App\Http\Filters;
+<?php namespace Rtoya\Http\Filters;
 
 use Auth;
 
