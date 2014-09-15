@@ -31,7 +31,7 @@ class AccountController extends Controller {
         $formData = $this->accountService
             ->formData($user);
 
-        return view('account::edit-settings')
+        return view('account.edit-settings')
             ->with('user',     $user)
             ->with('formData', $formData);
     }
@@ -44,7 +44,7 @@ class AccountController extends Controller {
         $formData = $this->accountService
             ->formData($user);
 
-        return view('account::edit-password')
+        return view('account.edit-password')
             ->with('user',     $user)
             ->with('formData', $formData);
     }
@@ -57,7 +57,7 @@ class AccountController extends Controller {
         $formData = $this->accountService
             ->formData($user);
 
-        return view('account::edit-social')
+        return view('account.edit-social')
             ->with('user',     $user)
             ->with('formData', $formData);
     }
@@ -73,7 +73,11 @@ class AccountController extends Controller {
             ->prepareSave($user, $values);
 
         $user->save();
-        $user->push();
+        // TODO: find out how to push these changes down to all relationship's
+        // Note: This only seems to be a problem when saving "social" settings
+        // (currently). Other account settings are fine, but this is because the
+        // social settings are in a related model, not the user model.
+        // $user->push();
 
         return Redirect::route('account');
     }

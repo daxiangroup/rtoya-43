@@ -15,9 +15,6 @@ class AccountService
 
     public function formData(User $user)
     {
-        // echo "<PRE>";
-        // print_r($user);
-        // die();
         $data[self::FIELD_NAME]         = $user->name;
         $data[self::FIELD_EMAIL]        = $user->email;
         $data[self::FIELD_WEBSITE_URL]  = $user->meta->website_url;
@@ -60,4 +57,26 @@ class AccountService
 
         return $user;
     }
+}
+
+// TODO: Move this into a proper helper location, not at the bottom of a Service Class
+function slugify($input, $trimShortWords = true, $toLower = true)
+{
+    $shortWords = array(
+        'to', 'the', 'and',
+    );
+
+    $input = preg_replace('/[\ \~\!\@\#\$\%\^&\*\(\)_\+\`\-\=\{\}\|\[\]\\\;\'\:\"\,\.\/\<\>\?\']/', '-', $input);
+
+    foreach ($shortWords as $shortWord) {
+        $input = str_replace($shortWord, '', $input);
+    }
+
+    while (preg_match('/--/', $input)) {
+        $input = str_replace('--', '-', $input);
+    }
+
+    $input = $toLower === true ? strtolower($input) : $input;
+
+    return trim($input, '-');
 }

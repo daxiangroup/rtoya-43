@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Contracts\Auth\User as UserContract;
 use Illuminate\Contracts\Auth\Remindable as RemindableContract;
-use UserMeta;
+use Rtoya\UserMeta;
 
 class User extends Model implements UserContract, RemindableContract {
 

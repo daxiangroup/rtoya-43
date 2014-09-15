@@ -72,7 +72,7 @@ Route::group(['before' => 'isSelf'], function() use ($routePrefix, $controller)
 
 /*
 |--------------------------------------------------------------------------
-| Account Routes
+| Art Routes
 |--------------------------------------------------------------------------
 */
 $routePrefix = '/art';
@@ -90,8 +90,11 @@ Route::get($routePrefix.'/{id}/{empty?}', array(
     'uses' => $controller.'getArtById',
     'as'   => 'art.artById'));
 
-
-// Signin Routes
+/*
+|--------------------------------------------------------------------------
+| Signin Routes
+|--------------------------------------------------------------------------
+*/
 $routePrefix = '/signin';
 $controller  = 'SigninController@';
 
