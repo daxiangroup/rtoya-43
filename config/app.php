@@ -191,6 +191,12 @@ return [
         'Form'           => 'Illuminate\Html\FormFacade',
 
         'AccountService' => 'Rtoya\Services\AccountService',
+        'ArtistService'  => 'Rtoya\Services\ArtistService',
+        'Art'            => 'Rtoya\Models\Art',
+        'ArtPhoto'       => 'Rtoya\Models\ArtPhoto',
+        'Gallery'        => 'Rtoya\Models\ArtPhoto',
+        'Gallery'        => 'Rtoya\Models\Gallery',
+        'User'           => 'Rtoya\User',
         'UserMeta'       => 'Rtoya\UserMeta',
 
     ],
