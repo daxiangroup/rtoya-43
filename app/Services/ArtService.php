@@ -1,9 +1,9 @@
 <?php namespace Rtoya\Services;
 
 use \User;
-use Rtoya\Art\Model\Art;
-use Rtoya\Art\Model\Gallery;
-use Rtoya\Base\Service\UserService;
+use Rtoya\Models\Art;
+use Rtoya\Models\Gallery;
+use Rtoya\Services\UserService;
 
 class ArtService
 {

@@ -26,7 +26,7 @@ class ArtController extends Controller {
         $featuredGalleries = $this->artService
             ->retrieveFeaturedGalleries(Config::get('art::defaults.featuredLimitGalleries'));
 
-        return View::make('art::art-featured')
+        return View::make('art.featured')
             ->with('featuredArts', $featuredArts)
             ->with('featuredArtists', $featuredArtists)
             ->with('featuredGalleries', $featuredGalleries);
@@ -46,7 +46,7 @@ class ArtController extends Controller {
         $user = $this->userService
             ->retrieveUserById($art->user->id);
 
-        return View::make('art::art-display')
+        return View::make('art.display')
             ->with('artist', $user)
             ->with('art', $art);
     }
@@ -120,7 +120,7 @@ class ArtController extends Controller {
         $featuredArts    = $this->artService
             ->retrieveFeaturedArts();
 
-        return View::make('art::art-featured-art')
+        return View::make('art.featured-art')
             ->with('featuredArts', $featuredArts);
     }
 
