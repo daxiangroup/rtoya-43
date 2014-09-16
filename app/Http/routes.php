@@ -1,6 +1,7 @@
 <?php
 
 use Rtoya\Services\ArtService;
+use Rtoya\Services\UserService;
 
 /*
 |--------------------------------------------------------------------------
@@ -89,6 +90,62 @@ Route::get($routePrefix.'/featured', array(
 Route::get($routePrefix.'/{id}/{empty?}', array(
     'uses' => $controller.'getArtById',
     'as'   => 'art.artById'));
+
+/*
+|--------------------------------------------------------------------------
+| Artist Routes
+|--------------------------------------------------------------------------
+*/
+$routePrefix = '/artist';
+$controller  = 'ArtistController@';
+
+Route::get($routePrefix, array(
+    'as'   => 'artist.index', function() {
+        return Redirect::route('artist.featuredArtists');
+    }));
+
+Route::get($routePrefix.'/featured', array(
+    'uses' => $controller.'getFeaturedArtists',
+    'as'   => 'artist.featuredArtists'));
+
+Route::get($routePrefix.'/featured/galleries', array(
+    'uses' => $controller.'getFeaturedGalleries',
+    'as'   => 'artist.featuredGalleries'));
+
+Route::get($routePrefix.'/{userName}', array(
+    'uses' => $controller.'getArtistByArtistName',
+    'as'   => 'artist.byArtistName'))
+    ->where('userName', UserService::REGEXP_USER_SLUG);
+
+Route::get($routePrefix.'/{userName}/galleries', array(
+    'uses' => $controller.'getArtistGalleriesByArtistName',
+    'as'   => 'artist.galleriesByArtistName'))
+    ->where('userName', UserService::REGEXP_USER_SLUG);
+
+Route::get($routePrefix.'/{userName}/gallery/{galleryName}/not-found', array(
+    'uses' => $controller.'getGalleryNotFound',
+    'as'   => 'artist.galleryNotFound'));
+
+Route::get($routePrefix.'/{userName}/gallery/{galleryName}', array(
+    'uses' => $controller.'getArtistGalleryByGalleryName',
+    'as'   => 'artist.galleryByGalleryName'))
+    ->where('userName',    UserService::REGEXP_USER_SLUG)
+    ->where('galleryName', ArtistService::REGEXP_GALLERY_SLUG);
+
+Route::get($routePrefix.'/{userName}/not-found', array(
+    'uses' => $controller.'getArtistNotFound',
+    'as'   => 'artist.notFound'));
+
+// Catch-All Route
+
+Route::any($routePrefix.'/{path?}', array(
+    'uses' => $controller.'getCatchAll',
+    'as'   => 'artist.catchAll'))
+    ->where('path', '.+');
+
+
+
+
 
 /*
 |--------------------------------------------------------------------------
