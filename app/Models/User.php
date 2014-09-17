@@ -1,11 +1,11 @@
-<?php namespace Rtoya;
+<?php namespace Rtoya\Models;
 
 use Illuminate\Auth\UserTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Contracts\Auth\User as UserContract;
 use Illuminate\Contracts\Auth\Remindable as RemindableContract;
-use Rtoya\UserMeta;
+use Rtoya\Models\UserMeta;
 
 class User extends Model implements UserContract, RemindableContract {
 

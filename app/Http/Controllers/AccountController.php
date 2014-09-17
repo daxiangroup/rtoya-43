@@ -4,7 +4,7 @@ use \Auth;
 use Illuminate\Routing\Controller;
 use \Input;
 use \Redirect;
-use \User;
+use Rtoya\Models\User;
 use Rtoya\Services\AccountService;
 use Rtoya\Services\UserService;
 

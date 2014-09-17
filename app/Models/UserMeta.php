@@ -1,4 +1,4 @@
-<?php namespace Rtoya;
+<?php namespace Rtoya\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

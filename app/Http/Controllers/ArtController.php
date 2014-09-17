@@ -3,7 +3,7 @@
 use \Auth;
 use Illuminate\Routing\Controller;
 use \Config;
-use \User;
+use Rtoya\Models\User;
 use \View;
 
 use Rtoya\Services\ArtService;

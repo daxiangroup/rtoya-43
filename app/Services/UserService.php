@@ -1,6 +1,6 @@
 <?php namespace Rtoya\Services;
 
-use Rtoya\User;
+use Rtoya\Models\User;
 
 class UserService
 {

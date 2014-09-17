@@ -1,6 +1,6 @@
 <?php namespace Rtoya\Services;
 
-use \User;
+use Rtoya\Models\User;
 use Rtoya\Models\Art;
 use Rtoya\Models\Gallery;
 use Rtoya\Services\UserService;

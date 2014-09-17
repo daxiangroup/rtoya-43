@@ -196,8 +196,8 @@ return [
         'ArtPhoto'       => 'Rtoya\Models\ArtPhoto',
         'Gallery'        => 'Rtoya\Models\ArtPhoto',
         'Gallery'        => 'Rtoya\Models\Gallery',
-        'User'           => 'Rtoya\User',
-        'UserMeta'       => 'Rtoya\UserMeta',
+        'User'           => 'Rtoya\Models\User',
+        'UserMeta'       => 'Rtoya\Models\UserMeta',
 
     ],
 
