@@ -62,7 +62,7 @@ class ArtistController extends Controller {
         $featuredGalleries = $this->artistService
             ->retrieveFeaturedGalleries();
 
-        return View::make('artist::artist-featured-galleries')
+        return View::make('artist.featured-galleries')
             ->with('featuredGalleries', $featuredGalleries);
     }
 
@@ -80,7 +80,7 @@ class ArtistController extends Controller {
         $user = $this->userService
             ->retrieveUserByNameSlug($userName);
         if (empty($user) === true) {
-            return Redirect::route('artist.notFound', $userName);
+            return Redirect::route('artist.notFound', [ $userName ]);
         }
 
         $art  = $this->artService
