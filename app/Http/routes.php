@@ -175,3 +175,21 @@ Route::get('/hash', function()
 {
     return Hash::make('test');
 });
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Signup Routes
+|--------------------------------------------------------------------------
+*/
+$routePrefix = '/signup';
+$controller  = 'SignupController@';
+
+Route::get($routePrefix, [
+    'uses' => $controller.'getIndex',
+    'as'   => 'signup']);
+
+Route::post($routePrefix, [
+    'uses' => $controller.'postSignup',
+    'as'   => 'signup.post']);
