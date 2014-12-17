@@ -193,3 +193,7 @@ Route::get($routePrefix, [
 Route::post($routePrefix, [
     'uses' => $controller.'postSignup',
     'as'   => 'signup.post']);
+
+Route::get('/welcome', [
+    'uses' => $controller.'getWelcome',
+    'as'   => 'welcome']);

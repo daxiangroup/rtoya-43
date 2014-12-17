@@ -15,11 +15,11 @@ class AccountService
 
     public function formData(User $user)
     {
-        $data[self::FIELD_NAME]         = $user->name;
+        $data[self::FIELD_NAME]         = isset($user->name)               ? $user->name : '';
         $data[self::FIELD_EMAIL]        = $user->email;
-        $data[self::FIELD_WEBSITE_URL]  = $user->meta->website_url;
-        $data[self::FIELD_FACEBOOK_URL] = $user->meta->facebook_url;
-        $data[self::FIELD_TWITTER]      = $user->meta->twitter;
+        $data[self::FIELD_WEBSITE_URL]  = isset($user->meta->website_url)  ? $user->meta->website_url : '';
+        $data[self::FIELD_FACEBOOK_URL] = isset($user->meta->facebook_url) ? $user->meta->facebook_url : '';
+        $data[self::FIELD_TWITTER]      = isset($user->meta->twitter)      ? $user->meta->twitter : '';
 
         return $data;
     }

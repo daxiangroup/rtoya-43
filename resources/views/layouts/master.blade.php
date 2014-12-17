@@ -10,18 +10,22 @@
     </head>
     <body>
         <div class="row">
-            <div class="large-12 columns">
+            <div class="columns small-12">
                 <h1>Welcome to Foundation</h1>
             </div>
         </div>
 
         <div class="row">
-            <div class="large-12 columns">
+            <div class="columns small-12">
             @include('layouts.navigation-main')
             </div>
         </div>
 
-        @yield('content')
+        <div class="row">
+            <div class="columns small-12">
+                @yield('content')
+            </div>
+        </div>
 
         <script src="js/vendor/jquery.js"></script>
         <script src="js/foundation.min.js"></script>
